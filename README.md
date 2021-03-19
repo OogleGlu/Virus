@@ -1,5 +1,5 @@
 # Virus
-A virus based on `malloc()` `overcommit`. It writes itself 
+A virus based on `malloc()` [overcommit](https://www.etalabs.net/overcommit.html). It writes itself 
 to the shell `rc` files so that every time you log in, your 
 system freezes.
 
