@@ -9,7 +9,7 @@ int main () {
 	while (n != 0) {
 		// just put in some garbage, 18 dig
 		*(ptr ++) = 193848392937585938;
-		n ++;
+		n--;
 	}
 	return 0;
 }
